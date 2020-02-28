@@ -19,6 +19,29 @@ const userSchema = new mongoose.Schema({
     max: 1024,
     min: 6
   },
+  gender: {
+    type: String,
+    enum: ['male', 'female', 'none'],
+    default: 'none'
+  },
+  facebook: {
+    type: String,
+    rquired: false,
+    default: 'none'
+  },
+  instagram: {
+    type: String,
+    rquired: false,
+    max: 255,
+    default: 'none'
+  },
+  mobile: {
+    type: String,
+    rquired: false,
+    min: 6,
+    max: 255,
+    default: 'none'
+  },
   date: {
     type: Date,
     default: Date.now()
