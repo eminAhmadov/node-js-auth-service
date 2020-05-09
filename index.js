@@ -25,3 +25,5 @@ app.use(express.json())
 app.use('/api/user', authRoute)
 
 app.listen(3000, () => console.log('Started Auth service'))
+
+module.exports = app
